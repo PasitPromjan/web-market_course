@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    text-decoration: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    background: #C7C8CC;
+}
+
+nav {
+    width: 100%;
+    height: 90px;
+    position: sticky;
+    top: 0px;
+}
+
+.nav-container {
+    max-width: 90vw;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-nav {
+    width: 7vw;
+    object-fit: contain;
+}
+
+.nav-profile {
+    display: flex;
+    align-items: center;
+}
+
+.nav-profile-name {
+    color: #332D2D;
+    font-size: 20px;
+    margin-right: 100px;
+    transition: 0.3s;
+}
+.nav-profile-name:hover{
+    color: #1c1919;
+}
+
+.fa-cart-shopping {
+    font-size: 30px;
+    color: #332D2D;
+    transition: 0.3s;
+}
+.fa-cart-shopping:hover{
+    color: #1c1919;
+}
+
+.nav-cart {
+    cursor: pointer;
+    
+    position: relative;
+}
+
+.cartcount {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 20px;
+    height: 20px;
+    background: #7B66FF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.container {
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+}
+
+.product {
+    padding: 10px;
+    height: 100%;
+    display: grid;
+}
+
+.face1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.product:hover .face1{
+    background: #ff0057;
+    transform: translateY(0px);
+}
+
+.face2{
+    position: relative;
+    display: flex;
+    transform: translateY(-100px);
+}
+
+.product:hover .face2{
+    transform: translateY(0);
+}
+
+.product-items {
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.product-items:hover {
+    transform: scale(1.03);
+}
+
+.product-img {
+    width: 100%;
+    height: 17vw;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-description{
+    padding: 1vw;
+}
+
+.product-name{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-price{
+    font-size: 15px;
+}
