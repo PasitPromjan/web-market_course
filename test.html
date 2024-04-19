@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flex Item Scroll</title>
+<style>
+    .container {
+        display: flex;
+        overflow-x: auto; /* Allow horizontal scrolling */
+        width: 300px; /* Set a width for the container */
+        border: 1px solid #ccc;
+    }
+
+    .item {
+        flex: 0 0 auto; /* Let the item's width be determined by its content */
+        white-space: nowrap; /* Prevent text from wrapping */
+        padding: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <!-- Add more items here -->
+</div>
+
+</body>
+</html>
