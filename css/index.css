@@ -196,7 +196,7 @@ li>a:hover::after, li>a.active-nav::after{
 
 .product-img {
     width: 20vw;
-    height: 17vw;
+    height: 17.25vw;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -334,11 +334,18 @@ li>a:hover::after, li>a.active-nav::after{
     z-index: 2;
     backdrop-filter: blur(10px);
     box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.5);
-    overflow-x: auto;
+    overflow-x: hidden;
     border-radius: 5px;
     justify-content: center;
     align-items: center;
 }
+
+.modalCart{
+  transition: 0.3s;
+  transform: translateY(200px);
+}
+
+
 
 .btnc {
     width: 30px;
@@ -368,7 +375,7 @@ li>a:hover::after, li>a.active-nav::after{
     background-color: white;
     margin-right: 20px;
     border-radius: 5px;
-
+    min-width: 290px;
   }
   .cartlist-detail{
     padding: 8px;
@@ -390,7 +397,8 @@ li>a:hover::after, li>a.active-nav::after{
     border-radius: 5px;
   }
 
-  .modal {
+  .modal,
+  .modal-bg {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
@@ -400,9 +408,10 @@ li>a:hover::after, li>a.active-nav::after{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 5;
+    z-index: 4;
   }
   .modal-page {
+    z-index: 5;
     min-width: 30vw;
     max-width: 60vw;
     height: 40vw;

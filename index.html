@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -19,9 +20,9 @@
                 <li><a class="nav-profile-name" href="#">Something</a></li>
                 <li><a class="nav-profile-name" href="#">Something</a></li>
                 <li><a class="nav-profile-name" href="#">Something</a></li>
-                <div class="nav-cart" href="#">
+                <div onclick="checkcart()" class="nav-cart" href="#">
                     <i class="fas fa-cart-shopping"></i>
-                    <div class="cartcount"> 1 </div>
+                    <div  id="cartcount" class="cartcount" style="display: none;"> 0 </div>
                 </div>
                 
             </div>
@@ -30,235 +31,28 @@
       </nav>
 
         <div class="container">
-            <div class="product">
-                <div class="product-items">
-                    <div class="face face3">
-                        <div class="product-up">
-                            <p class="product-name">Product</p>
-                            <p class="product-price">600 THB</p>
-                        </div>    
-                    </div>
-                    <div class="face face1">
-                        <img class="product-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-                        
-                    </div>   
-                    <div class="face face2">
-                        <div class="product-down">
-                            <button class="button-17" role="button">ใส่ตะกร้า</button>
-                            <button class="button-17" role="button" style="margin-left: 2vw;">รายละเอียด</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-items">
-                    <div class="face face3">
-                        <div class="product-up">
-                            <p class="product-name">Product</p>
-                            <p class="product-price">600 THB</p>
-                        </div>    
-                    </div>
-                    <div class="face face1">
-                        <img class="product-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-                        
-                    </div>   
-                    <div class="face face2">
-                        <div class="product-down">
-                            <button class="button-17" role="button">ใส่ตะกร้า</button>
-                            <button class="button-17" role="button" style="margin-left: 2vw;">รายละเอียด</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-items">
-                    <div class="face face3">
-                        <div class="product-up">
-                            <p class="product-name">Product</p>
-                            <p class="product-price">600 THB</p>
-                        </div>    
-                    </div>
-                    <div class="face face1">
-                        <img class="product-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-                        
-                    </div>   
-                    <div class="face face2">
-                        <div class="product-down">
-                            <button class="button-17" role="button">ใส่ตะกร้า</button>
-                            <button class="button-17" role="button" style="margin-left: 2vw;">รายละเอียด</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-items">
-                    <div class="face face3">
-                        <div class="product-up">
-                            <p class="product-name">Product</p>
-                            <p class="product-price">600 THB</p>
-                        </div>    
-                    </div>
-                    <div class="face face1">
-                        <img class="product-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-                        
-                    </div>   
-                    <div class="face face2">
-                        <div class="product-down">
-                            <button class="button-17" role="button">ใส่ตะกร้า</button>
-                            <button class="button-17" role="button" style="margin-left: 2vw;">รายละเอียด</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-items">
-                    <div class="face face3">
-                        <div class="product-up">
-                            <p class="product-name">Product</p>
-                            <p class="product-price">600 THB</p>
-                        </div>    
-                    </div>
-                    <div class="face face1">
-                        <img class="product-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-                        
-                    </div>   
-                    <div class="face face2">
-                        <div class="product-down">
-                            <button class="button-17" role="button">ใส่ตะกร้า</button>
-                            <button class="button-17" role="button" style="margin-left: 2vw;">รายละเอียด</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-items">
-                    <div class="face face3">
-                        <div class="product-up">
-                            <p class="product-name">Product</p>
-                            <p class="product-price">600 THB</p>
-                        </div>    
-                    </div>
-                    <div class="face face1">
-                        <img class="product-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-                        
-                    </div>   
-                    <div class="face face2">
-                        <div class="product-down">
-                            <button class="button-17" role="button">ใส่ตะกร้า</button>
-                            <button class="button-17" role="button" style="margin-left: 2vw;">รายละเอียด</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-items">
-                    <div class="face face3">
-                        <div class="product-up">
-                            <p class="product-name">Product</p>
-                            <p class="product-price">600 THB</p>
-                        </div>    
-                    </div>
-                    <div class="face face1">
-                        <img class="product-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-                        
-                    </div>   
-                    <div class="face face2">
-                        <div class="product-down">
-                            <button class="button-17" role="button">ใส่ตะกร้า</button>
-                            <button class="button-17" role="button" style="margin-left: 2vw;">รายละเอียด</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-items">
-                    <div class="face face3">
-                        <div class="product-up">
-                            <p class="product-name">Product</p>
-                            <p class="product-price">600 THB</p>
-                        </div>    
-                    </div>
-                    <div class="face face1">
-                        <img class="product-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-                        
-                    </div>   
-                    <div class="face face2">
-                        <div class="product-down">
-                            <button class="button-17" role="button">ใส่ตะกร้า</button>
-                            <button class="button-17" role="button" style="margin-left: 2vw;">รายละเอียด</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-items">
-                    <div class="face face3">
-                        <div class="product-up">
-                            <p class="product-name">Product</p>
-                            <p class="product-price">600 THB</p>
-                        </div>    
-                    </div>
-                    <div class="face face1">
-                        <img class="product-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-                        
-                    </div>   
-                    <div class="face face2">
-                        <div class="product-down">
-                            <button class="button-17" role="button">ใส่ตะกร้า</button>
-                            <button class="button-17" role="button" style="margin-left: 2vw;">รายละเอียด</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-items">
-                    <div class="face face3">
-                        <div class="product-up">
-                            <p class="product-name">Product</p>
-                            <p class="product-price">600 THB</p>
-                        </div>    
-                    </div>
-                    <div class="face face1">
-                        <img class="product-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-                        
-                    </div>   
-                    <div class="face face2">
-                        <div class="product-down">
-                            <button class="button-17" role="button">ใส่ตะกร้า</button>
-                            <button class="button-17" role="button" style="margin-left: 2vw;">รายละเอียด</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-items">
-                    <div class="face face3">
-                        <div class="product-up">
-                            <p class="product-name">Product</p>
-                            <p class="product-price">600 THB</p>
-                        </div>    
-                    </div>
-                    <div class="face face1">
-                        <img class="product-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-                        
-                    </div>   
-                    <div class="face face2">
-                        <div class="product-down">
-                            <button class="button-17" role="button">ใส่ตะกร้า</button>
-                            <button class="button-17" role="button" style="margin-left: 2vw;">รายละเอียด</button>
-                        </div>
-                    </div>
-                </div>
+            <div id='productlist' class="product">
+                
 
             </div>
         </div>
 
-        <div class="modal" style="display: none;">
-            <div class="modal-bg"></div>
+        <div id='productDesc' class="modal" style="display: none;">
+            <div onclick="closeDetail()" class="modal-bg"></div>
             <div class="modal-page">
               <div class="modaldesc-content">
-                <img class="modaldesc-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
+                <img id="pd-img" class="modaldesc-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
                 <div class="modaldesc-detail">
-                  <p style="font-size: 1.5vw;">Product name</p>
-                  <p style="font-size: 1.2vw;">500 THB</p>
+                  <p id="pd-name" style="font-size: 1.5vw;"></p>
+                  <p id="pd-price" style="font-size: 1.2vw;"></p>
                   <br>
-                  <p style="color: #adadad;">Lorem iaudantium harum doloremque alias. Quae, vel ipsum quasi, voluptas, sit optio nemo magni numquam non dicta voluptates porro! Vero eveniet numquam sit aut vel eligendi officiis iste tenetur expedita. Delectus vero quibusdam adipisci in. Esse.</p>
+                  <p id="pd-desc" style="color: #adadad;"></p>
                   <br>
                   <div class="btn-control">
-                    <button class="button-17">
+                    <button onclick="closeDetail()" class="button-17">
                       Close
                     </button>
-                    <button class="button-17">
+                    <button onclick="addtoCart()" class="button-17">
                       Add to cart
                     </button>
                   </div>
@@ -267,100 +61,22 @@
             </div>
           </div>
         
-            <div class="modal-left" style="display: none;">   
-                    <div class="cartlist">
-                        <div class="cartlist-items">
-                            <div class="cartlist-up">
-                                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-                                <div class="cartlist-detail">
-                                    <p >1Product namedadsadasdsdasdsas</p>
-                                    <p >500 THB</p>
-                                    <div class="cartlist-amount">
-                                        <p class="btnc">-</p>
-                                        <p style="margin: 0 20px;">1</p>
-                                        <p class="btnc">+</p>
-                                    </div>
-                                </div>
-                            </div>                         
-                        </div>
-                   
-                        <div class="cartlist-items">
-                            <div class="cartlist-up">
-                                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-                                <div class="cartlist-detail">
-                                    <p >1Product namedadsadasdsdasdsas</p>
-                                    <p >500 THB</p>
-                                    <div class="cartlist-amount">
-                                        <p class="btnc">-</p>
-                                        <p style="margin: 0 20px;">1</p>
-                                        <p class="btnc">+</p>
-                                    </div>
-                                </div>
-                            </div>                         
-                        </div>
-
-                        <div class="cartlist-items">
-                            <div class="cartlist-up">
-                                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-                                <div class="cartlist-detail">
-                                    <p >1Product namedadsadasdsdasdsas</p>
-                                    <p >500 THB</p>
-                                    <div class="cartlist-amount">
-                                        <p class="btnc">-</p>
-                                        <p style="margin: 0 20px;">1</p>
-                                        <p class="btnc">+</p>
-                                    </div>
-                                </div>
-                            </div>                         
-                        </div>
-
-                        <div class="cartlist-items">
-                            <div class="cartlist-up">
-                                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-                                <div class="cartlist-detail">
-                                    <p >1Product namedadsadasdsdasdsas</p>
-                                    <p >500 THB</p>
-                                    <div class="cartlist-amount">
-                                        <p class="btnc">-</p>
-                                        <p style="margin: 0 20px;">1</p>
-                                        <p class="btnc">+</p>
-                                    </div>
-                                </div>
-                            </div>                         
-                        </div>
-
-                        <div class="cartlist-items">
-                            <div class="cartlist-up">
-                                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
-                                <div class="cartlist-detail">
-                                    <p >1Product namedadsadasdsdasdsas</p>
-                                    <p >500 THB</p>
-                                    <div class="cartlist-amount">
-                                        <p class="btnc">-</p>
-                                        <p style="margin: 0 20px;">1</p>
-                                        <p class="btnc">+</p>
-                                    </div>
-                                </div>
-                            </div>                         
-                        </div>
-                    
+        <div class="modal-left modalCart" >   
+                    <div id="mycart" class="cartlist">
                         
-                    
-                        
-                
                     </div>
                     
                 
             
-            </div>
+        </div>
             
         
-        <div class="modal-right" style="display: none;">
+        <div class="modal-right modalCart " >
                         <div class="btn-control">
                                     <button class="button-17 red" style="margin-bottom: 10px; font-size: 20px; width: 5vw;">
                                     Buy
                                     </button>
-                                    <button class="button-17" style="font-size: 20px; width: 5vw;">
+                                    <button onclick="closecart()" class="button-17" style="font-size: 20px; width: 5vw;">
                                     Cancel
                                     </button>
                         </div>
@@ -368,6 +84,8 @@
       
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="javascript/scipt.js"></script>
 </body>
 </html>
 
